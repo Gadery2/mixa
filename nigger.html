@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Блядская Страничка 💀</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&family=Roboto:wght@300;400;700&display=swap');
+        body {
+            font-family: 'Lato', sans-serif;
+            background: linear-gradient(135deg, #ffcc33, #ff66cc);
+            color: #333;
+            margin: 0;
+            padding: 0;
+            overflow-y: auto;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+        header {
+            background-color: #222;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+        nav {
+            text-align: center;
+            margin: 20px 0;
+        }
+        nav button {
+            margin: 0 15px;
+            padding: 15px 25px;
+            border: none;
+            border-radius: 25px;
+            background-color: #333;
+            color: #fff;
+            font-weight: bold;
+            font-family: 'Roboto', sans-serif;
+            cursor: pointer;
+            transition: background-color 0.3s, transform 0.2s;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+        nav button:hover {
+            background-color: #555;
+            transform: scale(1.05);
+        }
+        main {
+            flex: 1;
+            padding: 40px;
+            text-align: center;
+            background-color: #fff;
+            margin: 20px;
+            border-radius: 15px;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+        }
+        main h2 {
+            color: #ff66cc;
+            font-family: 'Lato', sans-serif;
+        }
+        footer {
+            background-color: #222;
+            color: #fff;
+            padding: 15px;
+            text-align: center;
+            box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.2);
+            margin-top: auto;
+        }
+        .hidden {
+            display: none;
+        }
+        a {
+            color: #ff66cc;
+            text-decoration: none;
+            font-weight: bold;
+            font-family: 'Roboto', sans-serif;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+        .extra-content {
+            margin-top: 30px;
+            padding: 20px;
+            background-color: #ffccff;
+            border-radius: 10px;
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+            font-size: 1.1em;
+            font-family: 'Roboto', sans-serif;
+        }
+    </style>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            console.log("[LOG] Блядский документ полностью загружен и разобран.");
+            showSection('about');
+        });
+
+        window.addEventListener("load", function() {
+            console.log("[LOG] Все ресурсы, включая изображения и стили, загружены, нахуй.");
+        });
+
+        document.addEventListener("click", function(event) {
+            console.log(`[LOG] Щелкнули по элементу: ${event.target.tagName}, ID: ${event.target.id || 'N/A'}, Класс: ${event.target.className || 'N/A'}`);
+        });
+
+        window.addEventListener("scroll", function() {
+            console.log("[LOG] Пользователь скроллит эту блядскую страницу.");
+        });
+
+        document.addEventListener("mouseover", function(event) {
+            console.log(`[LOG] Навели курсор на элемент: ${event.target.tagName}, ID: ${event.target.id || 'N/A'}, Класс: ${event.target.className || 'N/A'}`);
+        });
+
+        function showSection(sectionId) {
+            const sections = document.querySelectorAll('main section');
+            sections.forEach(section => {
+                if (section.id === sectionId) {
+                    section.classList.remove('hidden');
+                } else {
+                    section.classList.add('hidden');
+                }
+            });
+            console.log(`[LOG] Показали раздел: ${sectionId}`);
+        }
+    </script>
+</head>
+<body>
+    <header>
+        <h1>Добро пожаловать на нашу блядскую страницу 💀</h1>
+    </header>
+
+    <nav>
+        <button onclick="showSection('about')">О нас, бля</button>
+        <button onclick="showSection('weirdStuff')">Самые дикие факты, нахуй</button>
+        <button onclick="showSection('conspiracies')">Теории Заговора, самые ебанутые</button>
+        <button onclick="showSection('dontEnter')">Не заходить, блядь</button>
+    </nav>
+    <main>
+        <section id="about">
+            <h2>О нас</h2>
+            <p>Эта страничка создана для того, чтобы показать, как нахуячил простую веб-страницу с помощью HTML и немного CSS. Ну, чтоб было видно, что я шарю, бля.</p>
+            <p>Тут не только инфа про HTML и CSS, но и как можно весело проводить время, рассказывая про медных бычков и всякую хуйню.</p>
+            <div class="extra-content">
+                <p>В общем, история такая: один раз мы решили замутить проект, который был такой замудрённый, что даже медный бычок удивился бы нахуй. Проект был связан с созданием супер охуенного сайта, который бы собирал всякую хуйню и выдавал пользователям за чистую монету. Ну да ладно, как-нибудь расскажу поподробнее.</p>
+            </div>
+        </section>
+
+        <section id="weirdStuff" class="hidden">
+            <h2>Самые дикие факты, нахуй</h2>
+            <p>Вот тебе подборка самых диких, непонятных и ебанутых фактов, которые только можно найти. Чтоб мозг кипел, нахуй:</p>
+            <div class="extra-content">
+                <p>1. Утконос - это, сука, единственное млекопитающее, которое откладывает яйца. Просто представь себе, как это вообще возможно — будто природа просто решила поугарать!</p>
+                <p>2. В 1962 году в Танганьике (нынешняя Танзания) произошла "эпидемия смеха". Началась она с трёх девочек, и вдруг весь город начал ржать как сумасшедший, и это продолжалось несколько месяцев. Вот это я понимаю угар на весь район!</p>
+                <p>3. Медные бычки на самом деле способны видеть в ультрафиолете. Правда, никто этого не проверял, но почему бы и нет? Это бы многое объяснило!</p>
+                <p>4. В Японии есть остров, полный кроликов. Их там больше, чем людей, и никто даже не знает, откуда они там взялись. Просто остров, полный пушистых захватчиков. Кролики, которые, возможно, скрывают свои коварные планы...</p>
+            </div>
+        </section>
+
+        <section id="conspiracies" class="hidden">
+            <h2>Теории Заговора, самые ебанутые</h2>
+            <p>Любишь теории заговора? Тогда держи самые ебанутые из них. Только не говори потом, что я тебя не предупреждал!</p>
+            <div class="extra-content">
+                <p>1. Земля на самом деле не круглая, а восьмигранная, как тот ебаный медный бычок, что стоял на перекрёстке дорог. Никто просто не удосужился заглянуть за угол.</p>
+                <p>2. Вся вода на планете — это на самом деле слёзы древних богов, которые каждый раз смеются, когда мы падаем со скейтборда. Именно поэтому она солёная!</p>
+                <p>3. Все голуби — это дроны правительства. Да, и медные бычки, бля, тоже. Поэтому если вдруг увидел такого, то, знай, он за тобой следит. Жесть, да?</p>
+            </div>
+        </section>
+
+        <section id="dontEnter" class="hidden">
+            <h2>:тебя предупреждали</h2>
+            <p>Ну что, ты реально решил сюда зайти? Ладно, держи полное безумие:</p>
+            <img src="https://uploads.dailydot.com/2024/10/v0PxACkA-jonkler-meme.png?q=65&auto=format&w=1600&ar=2:1&fit=crop" alt="Очень страшная картинка" style="width:80%; margin: 20px auto; box-shadow: 0 4px 16px rgba(0, 0, 0, 0.5); border-radius: 15px;">
+        </section>
+    </main>
+
+    <footer>
+        &copy; 2024 Наша Блядская Страничка. Все права защищены, нахуй.
+    </footer>
+</body>
+</html>
